@@ -3,7 +3,7 @@ info:
   name: react nice resume
 envs:
   prod:
-    branch: resume
+    branch: master
 routes:
   main_env: prod
   main_app: frontend
@@ -15,7 +15,7 @@ apps:
         build:
           root_path: ./
           before_script: NODE_VERSION=16
-          script: npm audit fix --force；npm run build
+          script: npm run build
         provision:
           root_path: build
           type: nodejs18x
